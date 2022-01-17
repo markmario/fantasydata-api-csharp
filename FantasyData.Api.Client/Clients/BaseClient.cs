@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -26,8 +25,8 @@ public abstract class BaseClient
     /// Indicates whether API calls will be made over secure https connection.
     /// </summary>
     /// <value>Default value is true</value>
-    private bool Https { get; set; } 
-    
+    private bool Https { get; set; }
+
     /// <summary>
     /// The encoding type to be used in the WebClient for data pulled
     /// </summary>
@@ -51,7 +50,7 @@ public abstract class BaseClient
 
     public BaseClient(Guid apiKey) : this(apiKey.ToString()) { }
 
-    protected  Task<T> GetAsync<T>(string apiCall) =>  this.GetAsync<T>(apiCall, null); 
+    protected  Task<T> GetAsync<T>(string apiCall) =>  this.GetAsync<T>(apiCall, null);
 
     protected async Task<T> GetAsync<T>(string apiCall, IList<KeyValuePair<string, string>> parameters)
     {
@@ -74,16 +73,18 @@ public abstract class BaseClient
             (current, parameter) =>
                 current.Replace("{" + parameter.Key.ToLower() + "}", parameter.Value.ToLower().Trim()));
 
-        // get string from http client get 
+        // get string from http client get
         var response = await this.client.GetAsync(url);
         var json = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
             throw new Exception(response.ReasonPhrase);
         }
-            
-        return JsonConvert.DeserializeObject<T>(json);
 
+        //return JsonConvert.DeserializeObject<T>(json);
+       //// var x = new System.Text.Json.Serialization.JsonConverter<T>()
         //var json = await response.Content.ReadAsStringAsync();
+        //JsonSerializer.Deserialize<Note>(jsonString)
+       return System.Text.Json.JsonSerializer.Deserialize<T>(json);
     }
 }
