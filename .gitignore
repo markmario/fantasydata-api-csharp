@@ -11,3 +11,5 @@
 */.vs/*
 *.nupkg
 */packages/*
+.idea/
+.DS_Store
