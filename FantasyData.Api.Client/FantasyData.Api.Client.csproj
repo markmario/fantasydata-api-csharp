@@ -8,7 +8,7 @@
     <Authors>FantasyData LLC; markmario</Authors>
     <Description>FantasyData API C# Client Library</Description>
     <Copyright>Copyright FantasyData LLC 2021</Copyright>
-    <PackageProjectUrl>https://github.com/fantasydata/fantasydata-api-csharp</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/markmario/fantasydata-api-csharp</PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/fantasydata/fantasydata-api-csharp/master/FantasyData.Api.Client/LICENSE.txt</PackageLicenseUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/fantasydata/fantasydata-api-csharp/master/FantasyData.Api.Client/fantasy-logo-icon-500-gray-white.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/markmario/fantasydata-api-csharp</RepositoryUrl>
