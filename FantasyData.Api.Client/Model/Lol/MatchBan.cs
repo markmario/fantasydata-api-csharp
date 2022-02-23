@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="MatchBan")]
 [Serializable]
-public partial class MatchBan
+public class MatchBan
 {
     /// <summary>
     /// The unique id of the match

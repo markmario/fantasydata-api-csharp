@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="Champion")]
 [Serializable]
-public partial class Champion
+public class Champion
 {
     /// <summary>
     /// The attack of the champion

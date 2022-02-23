@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="BettingResultingMetadata")]
 [Serializable]
-public partial class BettingResultingMetadata
+public class BettingResultingMetadata
 {
     /// <summary>
     /// The BettingMarketTypeID of this type of market which we can result

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="BoxScore")]
 [Serializable]
-public partial class BoxScore
+public class BoxScore
 {
     /// <summary>
     /// The details of the game associated with this box score

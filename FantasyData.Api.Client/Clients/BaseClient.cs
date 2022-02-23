@@ -4,11 +4,13 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using FantasyData.Api.Client.Model;
 
 namespace FantasyData.Api.Client;
 
 public abstract class BaseClient
 {
+    private readonly HttpClient client;
 
     /// <summary>
     /// The host name for making API calls.
@@ -35,24 +37,28 @@ public abstract class BaseClient
 
     private string Scheme => this.Https ? "https" : "http";
 
-    private readonly HttpClient client;
 
-    public BaseClient(string apiKey)
+    public BaseClient(string apiKey, HttpClient client)
     {
         this.Host = "api.sportsdata.io";
         this.ApiKey = apiKey.Replace("-", "").ToLower();
         this.Https = true;
         this.Encoding = new UTF8Encoding();
-        this.client = new HttpClient();
-        this.client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", this.ApiKey);
-        //this.client.DefaultRequestHeaders.
-    }
+        this.client = client;
+        if (!this.client.DefaultRequestHeaders.Contains("Ocp-Apim-Subscription-Key"))
+        {
+            this.client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", this.ApiKey);
+        }
 
-    public BaseClient(Guid apiKey) : this(apiKey.ToString()) { }
+    }
 
     protected  Task<T> GetAsync<T>(string apiCall) =>  this.GetAsync<T>(apiCall, null);
 
     protected async Task<T> GetAsync<T>(string apiCall, IList<KeyValuePair<string, string>> parameters)
+    {
+        return (await this.GetRawAsync<T>(apiCall, parameters)).Item1;
+    }
+    protected async Task<(T, string)> GetRawAsync<T>(string apiCall, IList<KeyValuePair<string, string>> parameters)
     {
         //client.Encoding = Encoding;
 
@@ -75,16 +81,58 @@ public abstract class BaseClient
 
         // get string from http client get
         var response = await this.client.GetAsync(url);
-        var json = await response.Content.ReadAsStringAsync();
+
         if (!response.IsSuccessStatusCode)
         {
-            throw new Exception(response.ReasonPhrase);
+            var headers = response.Headers.ToDictionary(h => h.Key, h => h.Value);
+            foreach (var item in response.Content.Headers)
+            {
+                headers[item.Key] = item.Value;
+            }
+            var responseData = await response.Content.ReadAsStringAsync();
+            var headerText = headers.Select(s => s.Key + ":\n" + s.Value.Join("\n")).Join("\n");
+            throw new FantasyDataWebException(response.ReasonPhrase, headerText, responseData, response.StatusCode);
         }
 
-        //return JsonConvert.DeserializeObject<T>(json);
-       //// var x = new System.Text.Json.Serialization.JsonConverter<T>()
-        //var json = await response.Content.ReadAsStringAsync();
-        //JsonSerializer.Deserialize<Note>(jsonString)
-       return System.Text.Json.JsonSerializer.Deserialize<T>(json);
+        var json = await response.Content.ReadAsStringAsync();
+        return (System.Text.Json.JsonSerializer.Deserialize<T>(json), json);
     }
+}
+
+internal static class StringExtensions
+{
+    internal static string Join(this IEnumerable<string> items, string separator)
+    {
+        if (separator == null)
+        {
+            throw new ArgumentNullException(nameof(separator));
+        }
+
+        if (items == null)
+        {
+            return null;
+        }
+
+        var first = true;
+        var sb = new StringBuilder();
+        foreach (var item in items)
+        {
+            if (item != null)
+            {
+                if (!first)
+                {
+                    sb.Append(separator);
+                }
+                else
+                {
+                    first = false;
+                }
+
+                sb.Append(item);
+            }
+        }
+
+        return sb.ToString();
+    }
+
 }

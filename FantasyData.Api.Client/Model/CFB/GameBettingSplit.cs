@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CFB;
 
 [DataContract(Namespace="", Name="GameBettingSplit")]
 [Serializable]
-public partial class GameBettingSplit
+public class GameBettingSplit
 {
     /// <summary>
     /// The unique id of the game record

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MLB;
 
 [DataContract(Namespace="", Name="Inning")]
 [Serializable]
-public partial class Inning
+public class Inning
 {
     /// <summary>
     /// The unique ID for the inning

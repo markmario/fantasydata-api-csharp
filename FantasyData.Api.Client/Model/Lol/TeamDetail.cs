@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="TeamDetail")]
 [Serializable]
-public partial class TeamDetail
+public class TeamDetail
 {
     /// <summary>
     /// The players who are current on this team's active roster/squad

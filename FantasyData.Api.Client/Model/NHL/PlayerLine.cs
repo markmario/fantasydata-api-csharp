@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="PlayerLine")]
 [Serializable]
-public partial class PlayerLine
+public class PlayerLine
 {
     /// <summary>
     /// The line the player is on (e.g. 1, 2, 3, or 4)

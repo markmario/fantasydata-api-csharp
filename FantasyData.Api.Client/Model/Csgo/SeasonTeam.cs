@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Csgo;
 
 [DataContract(Namespace="", Name="SeasonTeam")]
 [Serializable]
-public partial class SeasonTeam
+public class SeasonTeam
 {
     /// <summary>
     /// Unique ID of this season/team combination

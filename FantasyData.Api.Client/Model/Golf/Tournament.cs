@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Golf;
 
 [DataContract(Namespace="", Name="Tournament")]
 [Serializable]
-public partial class Tournament
+public class Tournament
 {
     /// <summary>
     /// The unique ID of this tournament

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="Bye")]
 [Serializable]
-public partial class Bye
+public class Bye
 {
     /// <summary>
     /// The NFL season during this bye week

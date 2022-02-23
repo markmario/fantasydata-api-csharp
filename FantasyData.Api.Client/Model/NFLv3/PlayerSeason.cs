@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="PlayerSeason")]
 [Serializable]
-public partial class PlayerSeason
+public class PlayerSeason
 {
     /// <summary>
     /// Unique ID assigned to each player that stays with them throughout their career

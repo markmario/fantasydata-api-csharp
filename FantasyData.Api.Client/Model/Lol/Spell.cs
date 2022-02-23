@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="Spell")]
 [Serializable]
-public partial class Spell
+public class Spell
 {
     /// <summary>
     /// The unique id of the spell

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="CompetitionDetail")]
 [Serializable]
-public partial class CompetitionDetail
+public class CompetitionDetail
 {
     /// <summary>
     /// The current active season for this competition/league

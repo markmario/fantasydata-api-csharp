@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NBA;
 
 [DataContract(Namespace="", Name="Standing")]
 [Serializable]
-public partial class Standing
+public class Standing
 {
     /// <summary>
     /// The NBA regular season for which these totals apply

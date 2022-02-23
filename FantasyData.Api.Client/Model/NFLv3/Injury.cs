@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="Injury")]
 [Serializable]
-public partial class Injury
+public class Injury
 {
     /// <summary>
     /// Unique ID of the injury status

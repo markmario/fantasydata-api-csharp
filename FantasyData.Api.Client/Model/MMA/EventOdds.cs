@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MMA;
 
 [DataContract(Namespace="", Name="EventOdds")]
 [Serializable]
-public partial class EventOdds
+public class EventOdds
 {
     /// <summary>
     /// The Event object

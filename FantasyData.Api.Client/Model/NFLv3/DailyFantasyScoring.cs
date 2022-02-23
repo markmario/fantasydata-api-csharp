@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="DailyFantasyScoring")]
 [Serializable]
-public partial class DailyFantasyScoring
+public class DailyFantasyScoring
 {
     /// <summary>
     /// Unique ID assigned to each player that stays with them throughout their career

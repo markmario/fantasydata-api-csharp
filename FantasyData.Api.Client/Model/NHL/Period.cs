@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="Period")]
 [Serializable]
-public partial class Period
+public class Period
 {
     /// <summary>
     /// Unique identifier for each period.

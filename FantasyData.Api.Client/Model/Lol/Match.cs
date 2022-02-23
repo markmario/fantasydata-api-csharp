@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="Match")]
 [Serializable]
-public partial class Match
+public class Match
 {
     /// <summary>
     /// The Unique ID of the Game the match is from.

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="PlayerDefense")]
 [Serializable]
-public partial class PlayerDefense
+public class PlayerDefense
 {
     /// <summary>
     /// Unique ID of PlayerGame record (subject to change, although it very rarely does).  For a static ID, use a combination of GameKey and PlayerID.

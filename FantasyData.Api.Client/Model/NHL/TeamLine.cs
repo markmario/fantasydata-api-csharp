@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="TeamLine")]
 [Serializable]
-public partial class TeamLine
+public class TeamLine
 {
     /// <summary>
     /// The unique ID for the team

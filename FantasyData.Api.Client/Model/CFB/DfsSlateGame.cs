@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CFB;
 
 [DataContract(Namespace="", Name="DfsSlateGame")]
 [Serializable]
-public partial class DfsSlateGame
+public class DfsSlateGame
 {
     /// <summary>
     /// Unique ID of a SlateGame (assigned by FantasyData).

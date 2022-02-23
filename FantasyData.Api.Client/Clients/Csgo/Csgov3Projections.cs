@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.Csgo;
 
 namespace FantasyData.Api.Client;
 
-public partial class Csgov3ProjectionsClient : BaseClient
+public class Csgov3ProjectionsClient : BaseClient
 {
-    public Csgov3ProjectionsClient(string apiKey) : base(apiKey)
+    public Csgov3ProjectionsClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public Csgov3ProjectionsClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

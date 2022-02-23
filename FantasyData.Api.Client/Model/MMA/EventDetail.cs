@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MMA;
 
 [DataContract(Namespace="", Name="EventDetail")]
 [Serializable]
-public partial class EventDetail
+public class EventDetail
 {
     /// <summary>
     /// The details of the fights

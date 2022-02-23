@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Nascar;
 
 [DataContract(Namespace="", Name="RaceResult")]
 [Serializable]
-public partial class RaceResult
+public class RaceResult
 {
     /// <summary>
     /// The details of the race

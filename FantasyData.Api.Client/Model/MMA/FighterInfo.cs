@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MMA;
 
 [DataContract(Namespace="", Name="FighterInfo")]
 [Serializable]
-public partial class FighterInfo
+public class FighterInfo
 {
     /// <summary>
     /// The unique ID of this fighter

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.NFLv3;
 
@@ -7,8 +8,10 @@ namespace FantasyData.Api.Client;
 
 public class SampleClient : BaseClient
 {
-    public SampleClient(string apiKey) : base(apiKey) { }
-    public SampleClient(Guid apiKey) : base(apiKey) { }
+    public SampleClient(string apiKey, HttpClient client) : base(apiKey, client)
+    {
+
+    }
 
     public async Task<IList<Team>> GetTeamsAync()
     {

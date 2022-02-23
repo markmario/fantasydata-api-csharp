@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="Stadium")]
 [Serializable]
-public partial class Stadium
+public class Stadium
 {
     /// <summary>
     /// The unique ID of the arena

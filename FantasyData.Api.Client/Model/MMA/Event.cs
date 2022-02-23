@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MMA;
 
 [DataContract(Namespace="", Name="Event")]
 [Serializable]
-public partial class Event
+public class Event
 {
     /// <summary>
     /// The unique ID of this event

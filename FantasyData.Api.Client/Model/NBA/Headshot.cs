@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NBA;
 
 [DataContract(Namespace="", Name="Headshot")]
 [Serializable]
-public partial class Headshot
+public class Headshot
 {
     /// <summary>
     /// Unique ID of the Player (assigned by FantasyData).

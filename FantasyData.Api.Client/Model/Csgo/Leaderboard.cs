@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Csgo;
 
 [DataContract(Namespace="", Name="Leaderboard")]
 [Serializable]
-public partial class Leaderboard
+public class Leaderboard
 {
     /// <summary>
     /// The unique ID of this player

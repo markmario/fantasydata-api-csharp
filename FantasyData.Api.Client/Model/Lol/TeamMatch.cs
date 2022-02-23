@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="TeamMatch")]
 [Serializable]
-public partial class TeamMatch
+public class TeamMatch
 {
     /// <summary>
     /// Total first bloods this team had this game

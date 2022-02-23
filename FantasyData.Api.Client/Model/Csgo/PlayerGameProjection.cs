@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Csgo;
 
 [DataContract(Namespace="", Name="PlayerGameProjection")]
 [Serializable]
-public partial class PlayerGameProjection
+public class PlayerGameProjection
 {
     /// <summary>
     /// The unique ID of this player

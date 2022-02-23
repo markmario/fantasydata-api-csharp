@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NBA;
 
 [DataContract(Namespace="", Name="Play")]
 [Serializable]
-public partial class Play
+public class Play
 {
     /// <summary>
     /// The unique identifier of the play.

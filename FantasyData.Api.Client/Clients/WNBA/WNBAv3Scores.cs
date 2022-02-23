@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.WNBA;
 
 namespace FantasyData.Api.Client;
 
-public partial class WNBAv3ScoresClient : BaseClient
+public class WNBAv3ScoresClient : BaseClient
 {
-    public WNBAv3ScoresClient(string apiKey) : base(apiKey)
+    public WNBAv3ScoresClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public WNBAv3ScoresClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>
@@ -23,7 +21,7 @@ public partial class WNBAv3ScoresClient : BaseClient
         var parameters = new List<KeyValuePair<string, string>>();
         return this.GetAsync<bool>("/v3/wnba/scores/{format}/AreAnyGamesInProgress", parameters);
     }
-    
+
 
     /// <summary>
     /// Get Current Season Asynchronous

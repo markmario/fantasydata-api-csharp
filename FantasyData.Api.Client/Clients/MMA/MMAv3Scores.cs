@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.MMA;
 
 namespace FantasyData.Api.Client;
 
-public partial class MMAv3ScoresClient : BaseClient
+public class MMAv3ScoresClient : BaseClient
 {
-    public MMAv3ScoresClient(string apiKey) : base(apiKey)
+    public MMAv3ScoresClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public MMAv3ScoresClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

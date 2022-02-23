@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NBA;
 
 [DataContract(Namespace="", Name="Referee")]
 [Serializable]
-public partial class Referee
+public class Referee
 {
     /// <summary>
     /// Unique ID of Referee

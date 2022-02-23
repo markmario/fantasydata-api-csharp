@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MMA;
 
 [DataContract(Namespace="", Name="League")]
 [Serializable]
-public partial class League
+public class League
 {
     /// <summary>
     /// The unique ID of this MMA league

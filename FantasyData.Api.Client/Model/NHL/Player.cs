@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="Player")]
 [Serializable]
-public partial class Player
+public class Player
 {
     /// <summary>
     /// The player's unique PlayerID as assigned by FantasyData.

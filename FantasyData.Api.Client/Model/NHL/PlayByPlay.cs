@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="PlayByPlay")]
 [Serializable]
-public partial class PlayByPlay
+public class PlayByPlay
 {
     /// <summary>
     /// Game Information.

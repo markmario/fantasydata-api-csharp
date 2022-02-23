@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="Penalty")]
 [Serializable]
-public partial class Penalty
+public class Penalty
 {
     /// <summary>
     /// The unique ID of this penalty

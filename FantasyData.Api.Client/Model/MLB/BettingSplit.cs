@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MLB;
 
 [DataContract(Namespace="", Name="BettingSplit")]
 [Serializable]
-public partial class BettingSplit
+public class BettingSplit
 {
     /// <summary>
     /// The unique id of this specific instance of the split

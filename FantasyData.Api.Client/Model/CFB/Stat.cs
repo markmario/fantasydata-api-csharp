@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CFB;
 
 [DataContract(Namespace="", Name="Stat")]
 [Serializable]
-public partial class Stat
+public class Stat
 {
     /// <summary>
     /// The updated date and time of the stat.

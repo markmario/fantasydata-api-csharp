@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.MLB;
 
 namespace FantasyData.Api.Client;
 
-public partial class MLBv3RotoBallerPremiumNewsClient : BaseClient
+public class MLBv3RotoBallerPremiumNewsClient : BaseClient
 {
-    public MLBv3RotoBallerPremiumNewsClient(string apiKey) : base(apiKey)
+    public MLBv3RotoBallerPremiumNewsClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public MLBv3RotoBallerPremiumNewsClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

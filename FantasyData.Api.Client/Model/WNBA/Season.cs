@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.WNBA;
 
 [DataContract(Namespace="", Name="Season")]
 [Serializable]
-public partial class Season
+public class Season
 {
     /// <summary>
     /// The WNBA regular season for which these totals apply

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="Area")]
 [Serializable]
-public partial class Area
+public class Area
 {
     /// <summary>
     /// The unique ID of the area

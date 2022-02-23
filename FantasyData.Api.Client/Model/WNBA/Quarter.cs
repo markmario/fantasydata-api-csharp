@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.WNBA;
 
 [DataContract(Namespace="", Name="Quarter")]
 [Serializable]
-public partial class Quarter
+public class Quarter
 {
     /// <summary>
     /// Unique identifier for each Quarter.

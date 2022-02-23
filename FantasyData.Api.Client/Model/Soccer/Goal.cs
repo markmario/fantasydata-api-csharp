@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Soccer;
 
 [DataContract(Namespace="", Name="Goal")]
 [Serializable]
-public partial class Goal
+public class Goal
 {
     /// <summary>
     /// The unique ID of the goal

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MLB;
 
 [DataContract(Namespace="", Name="Pitch")]
 [Serializable]
-public partial class Pitch
+public class Pitch
 {
     /// <summary>
     /// The unqiue ID of the pitch.

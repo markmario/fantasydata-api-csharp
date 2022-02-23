@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.Nascar;
 
 namespace FantasyData.Api.Client;
 
-public partial class NASCARv2Client : BaseClient
+public class NASCARv2Client : BaseClient
 {
-    public NASCARv2Client(string apiKey) : base(apiKey)
+    public NASCARv2Client(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public NASCARv2Client(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

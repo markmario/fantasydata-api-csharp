@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.Lol;
 
 namespace FantasyData.Api.Client;
 
-public partial class Lolv3ProjectionsClient : BaseClient
+public class Lolv3ProjectionsClient : BaseClient
 {
-    public Lolv3ProjectionsClient(string apiKey) : base(apiKey)
+    public Lolv3ProjectionsClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public Lolv3ProjectionsClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

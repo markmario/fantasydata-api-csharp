@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CWBB;
 
 [DataContract(Namespace="", Name="Period")]
 [Serializable]
-public partial class Period
+public class Period
 {
     /// <summary>
     /// The unique ID for the period

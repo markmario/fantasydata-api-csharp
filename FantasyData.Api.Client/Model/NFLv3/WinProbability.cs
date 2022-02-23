@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="WinProbability")]
 [Serializable]
-public partial class WinProbability
+public class WinProbability
 {
     /// <summary>
     /// The amount of time remaining in the current quarter (11:23, 5:34, NULL if game is not in progress or at halftime)

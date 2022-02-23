@@ -1,17 +1,17 @@
 ﻿using FantasyData.Api.Client;
 
+var client = new  NBAv3PlayByPlayClient("your-key-goes-here", new HttpClient());
 
-
-
-// Connect to client and get data
-var client = new  NFLv3ScoresClient("<api_key_goes_here>");
-var scores = await client.GetScoresAsync("2020POST");
-
-// Write data to console
-foreach (var score in scores)
+var times = await client.GetBoxScoresDeltaRawAsync("2021-DEC-25", "2");
+foreach (var time in times.Item1)
 {
-    Console.WriteLine($"{score.AwayTeam} @ {score.HomeTeam}");
+   Console.WriteLine(times.Item2);
 }
+
+Console.ReadLine();
+
+
+
 
 Console.WriteLine();
 Console.WriteLine("Press enter to continue...");

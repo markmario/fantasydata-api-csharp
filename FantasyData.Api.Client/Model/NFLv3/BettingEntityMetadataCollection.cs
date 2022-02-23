@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="BettingEntityMetadataCollection")]
 [Serializable]
-public partial class BettingEntityMetadataCollection
+public class BettingEntityMetadataCollection
 {
     /// <summary>
     /// A list of the possible BettingBetTypes (e.g. Moneyline, Spread)

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CFB;
 
 [DataContract(Namespace="", Name="GameStat")]
 [Serializable]
-public partial class GameStat
+public class GameStat
 {
     /// <summary>
     /// The NFL week of the game (weeks 18-21 denote playoff games)

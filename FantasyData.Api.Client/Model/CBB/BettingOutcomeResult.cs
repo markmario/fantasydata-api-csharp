@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CBB;
 
 [DataContract(Namespace="", Name="BettingOutcomeResult")]
 [Serializable]
-public partial class BettingOutcomeResult
+public class BettingOutcomeResult
 {
     /// <summary>
     /// The unique identifier of the outcome

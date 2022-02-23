@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CFB;
 
 [DataContract(Namespace="", Name="Season")]
 [Serializable]
-public partial class Season
+public class Season
 {
     /// <summary>
     /// The NCAA football season

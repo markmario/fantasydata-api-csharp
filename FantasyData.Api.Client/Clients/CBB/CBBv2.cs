@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.CBB;
 
 namespace FantasyData.Api.Client;
 
-public partial class CBBv2Client : BaseClient
+public class CBBv2Client : BaseClient
 {
-    public CBBv2Client(string apiKey) : base(apiKey)
-    {
-    }
-
-    public CBBv2Client(Guid apiKey) : base(apiKey)
+    public CBBv2Client(string apiKey, HttpClient client) : base(apiKey, client)
     {
     }
 

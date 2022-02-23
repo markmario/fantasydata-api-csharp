@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Soccer;
 
 [DataContract(Namespace="", Name="PlayoffAggregateScore")]
 [Serializable]
-public partial class PlayoffAggregateScore
+public class PlayoffAggregateScore
 {
     /// <summary>
     /// Id of one of the teams.  Team A is determined by the home team in the first leg, and remains set through the life of the record.

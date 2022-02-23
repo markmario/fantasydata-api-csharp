@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <LangVersion>latestmajor</LangVersion>
-    <TargetFrameworks>net6.0;netstandard2.0;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>FantasyData.Api.Client.Core</PackageId>
     <Title>FantasyData.Api.Client.Core</Title>
@@ -18,6 +17,7 @@
 Removed All Sync Methods</PackageReleaseNotes>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <FileVersion>1.0.0</FileVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

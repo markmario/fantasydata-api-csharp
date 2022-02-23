@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="Team")]
 [Serializable]
-public partial class Team
+public class Team
 {
     /// <summary>
     /// Abbreviation of the team (e.g. SD, PHI, NE, IND, etc.)

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Nascar;
 
 [DataContract(Namespace="", Name="Driver")]
 [Serializable]
-public partial class Driver
+public class Driver
 {
     /// <summary>
     /// The unique ID of this driver (assigned by FantasyData)

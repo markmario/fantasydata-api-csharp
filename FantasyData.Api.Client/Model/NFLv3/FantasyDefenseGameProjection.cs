@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="FantasyDefenseGameProjection")]
 [Serializable]
-public partial class FantasyDefenseGameProjection
+public class FantasyDefenseGameProjection
 {
     /// <summary>
     /// A 9 digit unique code identifying the game that this record corresponds to.  The GameID is composed of Season, SeasonType, Week and HomeTeam.

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="GameProbability")]
 [Serializable]
-public partial class GameProbability
+public class GameProbability
 {
     /// <summary>
     /// Unique ID of the Score/Game

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CFB;
 
 [DataContract(Namespace="", Name="Injury")]
 [Serializable]
-public partial class Injury
+public class Injury
 {
     /// <summary>
     /// Unique ID of the injury status

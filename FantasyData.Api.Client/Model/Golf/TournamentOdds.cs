@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Golf;
 
 [DataContract(Namespace="", Name="TournamentOdds")]
 [Serializable]
-public partial class TournamentOdds
+public class TournamentOdds
 {
     /// <summary>
     /// The Tournament object.

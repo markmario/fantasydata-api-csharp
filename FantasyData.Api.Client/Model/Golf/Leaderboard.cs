@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Golf;
 
 [DataContract(Namespace="", Name="Leaderboard")]
 [Serializable]
-public partial class Leaderboard
+public class Leaderboard
 {
     /// <summary>
     /// The details of the tournament for this leaderboard

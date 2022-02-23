@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="PlayerGame")]
 [Serializable]
-public partial class PlayerGame
+public class PlayerGame
 {
     /// <summary>
     /// The Unique ID of the Game

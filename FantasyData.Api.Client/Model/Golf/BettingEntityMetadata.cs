@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Golf;
 
 [DataContract(Namespace="", Name="BettingEntityMetadata")]
 [Serializable]
-public partial class BettingEntityMetadata
+public class BettingEntityMetadata
 {
     /// <summary>
     /// The id of the record.  Unique only within the same entity type (i.e. BettingMarketType Ids overlap with BettingBetType Ids)

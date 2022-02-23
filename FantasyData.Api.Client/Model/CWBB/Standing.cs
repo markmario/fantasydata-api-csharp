@@ -6,6 +6,6 @@ namespace FantasyData.Api.Client.Model.CWBB;
 
 [DataContract(Namespace="", Name="Standing")]
 [Serializable]
-public partial class Standing
+public class Standing
 {
 }

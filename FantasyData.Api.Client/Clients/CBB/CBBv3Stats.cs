@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.CBB;
 
 namespace FantasyData.Api.Client;
 
-public partial class CBBv3StatsClient : BaseClient
+public class CBBv3StatsClient : BaseClient
 {
-    public CBBv3StatsClient(string apiKey) : base(apiKey)
+    public CBBv3StatsClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public CBBv3StatsClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

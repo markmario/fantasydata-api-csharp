@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="TeamTrends")]
 [Serializable]
-public partial class TeamTrends
+public class TeamTrends
 {
     /// <summary>
     /// Abbreviation of the team (e.g. LA, PHI, BOS, CHI, etc.)

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="Stat")]
 [Serializable]
-public partial class Stat
+public class Stat
 {
     /// <summary>
     /// The last update time of the record

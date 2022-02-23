@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="DfsSlatePlayer")]
 [Serializable]
-public partial class DfsSlatePlayer
+public class DfsSlatePlayer
 {
     /// <summary>
     /// Unique ID of a SlatePlayer (assigned by FantasyData).

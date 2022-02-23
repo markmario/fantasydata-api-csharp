@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="Standing")]
 [Serializable]
-public partial class Standing
+public class Standing
 {
     /// <summary>
     /// The unique ID of the standing

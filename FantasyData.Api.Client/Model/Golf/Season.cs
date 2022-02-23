@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Golf;
 
 [DataContract(Namespace="", Name="Season")]
 [Serializable]
-public partial class Season
+public class Season
 {
     /// <summary>
     /// The year of the season usable in the API

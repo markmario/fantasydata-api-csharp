@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.Soccer;
 
 namespace FantasyData.Api.Client;
 
-public partial class Soccerv3OddsClient : BaseClient
+public class Soccerv3OddsClient : BaseClient
 {
-    public Soccerv3OddsClient(string apiKey) : base(apiKey)
+    public Soccerv3OddsClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public Soccerv3OddsClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

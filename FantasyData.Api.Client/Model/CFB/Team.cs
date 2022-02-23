@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CFB;
 
 [DataContract(Namespace="", Name="Team")]
 [Serializable]
-public partial class Team
+public class Team
 {
     /// <summary>
     /// The auto-generated unique ID of the Team

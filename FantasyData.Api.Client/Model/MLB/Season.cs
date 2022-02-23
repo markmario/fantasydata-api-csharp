@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MLB;
 
 [DataContract(Namespace="", Name="Season")]
 [Serializable]
-public partial class Season
+public class Season
 {
     /// <summary>
     /// The MLB regular season for which these totals apply

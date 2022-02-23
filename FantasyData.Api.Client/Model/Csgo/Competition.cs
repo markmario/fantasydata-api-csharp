@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Csgo;
 
 [DataContract(Namespace="", Name="Competition")]
 [Serializable]
-public partial class Competition
+public class Competition
 {
     /// <summary>
     /// The unique ID of the competition/league

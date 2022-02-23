@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="GameOdd")]
 [Serializable]
-public partial class GameOdd
+public class GameOdd
 {
     /// <summary>
     /// Unique ID of this odd

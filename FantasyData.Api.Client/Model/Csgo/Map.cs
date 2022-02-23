@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Csgo;
 
 [DataContract(Namespace="", Name="Map")]
 [Serializable]
-public partial class Map
+public class Map
 {
     /// <summary>
     /// The number of this map in the order it was played

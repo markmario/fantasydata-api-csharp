@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MLB;
 
 [DataContract(Namespace="", Name="PlayerSeasonProjection")]
 [Serializable]
-public partial class PlayerSeasonProjection
+public class PlayerSeasonProjection
 {
     /// <summary>
     /// The unique ID of the stat

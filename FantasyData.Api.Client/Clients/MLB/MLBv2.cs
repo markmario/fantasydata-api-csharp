@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.MLB;
 
 namespace FantasyData.Api.Client;
 
-public partial class MLBv2Client : BaseClient
+public class MLBv2Client : BaseClient
 {
-    public MLBv2Client(string apiKey) : base(apiKey)
+    public MLBv2Client(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public MLBv2Client(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

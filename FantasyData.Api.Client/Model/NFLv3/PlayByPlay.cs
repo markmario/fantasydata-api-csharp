@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="PlayByPlay")]
 [Serializable]
-public partial class PlayByPlay
+public class PlayByPlay
 {
     /// <summary>
     /// The latest regular season stats for this player

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="AdvancedPlayerMedical")]
 [Serializable]
-public partial class AdvancedPlayerMedical
+public class AdvancedPlayerMedical
 {
     [DataMember(Name = "AdvancedPlayerMedicalID", Order = 1)]
     public int AdvancedPlayerMedicalID { get; set; }

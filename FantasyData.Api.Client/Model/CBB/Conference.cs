@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CBB;
 
 [DataContract(Namespace="", Name="Conference")]
 [Serializable]
-public partial class Conference
+public class Conference
 {
     /// <summary>
     /// The ID of the team's conference

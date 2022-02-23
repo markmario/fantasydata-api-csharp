@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Golf;
 
 [DataContract(Namespace="", Name="Sportsbook")]
 [Serializable]
-public partial class Sportsbook
+public class Sportsbook
 {
     /// <summary>
     /// The unique identifier of the sportsbook

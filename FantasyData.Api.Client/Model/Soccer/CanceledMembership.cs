@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Soccer;
 
 [DataContract(Namespace="", Name="CanceledMembership")]
 [Serializable]
-public partial class CanceledMembership
+public class CanceledMembership
 {
     /// <summary>
     /// Unique ID of the canceled membership.

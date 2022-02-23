@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="BettingMarketSplit")]
 [Serializable]
-public partial class BettingMarketSplit
+public class BettingMarketSplit
 {
     /// <summary>
     /// Unique ID of Betting Market

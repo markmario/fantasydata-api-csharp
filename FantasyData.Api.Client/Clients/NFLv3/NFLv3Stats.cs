@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.NFLv3;
 
 namespace FantasyData.Api.Client;
 
-public partial class NFLv3StatsClient : BaseClient
+public class NFLv3StatsClient : BaseClient
 {
-    public NFLv3StatsClient(string apiKey) : base(apiKey)
+    public NFLv3StatsClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public NFLv3StatsClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>
@@ -323,13 +321,23 @@ public partial class NFLv3StatsClient : BaseClient
     /// <param name="season">Year of the season and the season type. If no season type is provided, then the default is regular season. Examples: <code>2015REG</code>, <code>2015PRE</code>, <code>2015POST</code>.</param>
     /// <param name="week">Week of the season. Valid values are as follows: Preseason 0 to 4, Regular Season 1 to 17, Postseason 1 to 4. Example: <code>1</code></param>
     /// <param name="minutes">Only returns player statistics that have changed in the last X minutes. You specify how many minutes in time to go back. Valid entries are: <code>1</code> or <code>2</code>.</param>
-    public Task<List<BoxScore>> GetBoxScoresDeltaAsync(string season, int week, string minutes)
+    public Task<List<BoxScore>> GetBoxScoresDeltaAsync(string season, string week, string minutes)
     {
         var parameters = new List<KeyValuePair<string, string>>
         {
             new("season", season), new("week", week.ToString()), new("minutes", minutes)
         };
         return this.GetAsync<List<BoxScore>>("/v3/nfl/stats/{format}/BoxScoresDelta/{season}/{week}/{minutes}",
+            parameters);
+    }
+
+    public Task<(List<BoxScore>, string)> GetBoxScoresDeltaRawAsync(string season, string week, string minutes)
+    {
+        var parameters = new List<KeyValuePair<string, string>>
+        {
+            new("season", season), new("week", week.ToString()), new("minutes", minutes)
+        };
+        return this.GetRawAsync<List<BoxScore>>("/v3/nfl/stats/{format}/BoxScoresDelta/{season}/{week}/{minutes}",
             parameters);
     }
 

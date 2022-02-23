@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.NBA;
 
 namespace FantasyData.Api.Client;
 
-public partial class NBAv3StatsClient : BaseClient
+public class NBAv3StatsClient : BaseClient
 {
-    public NBAv3StatsClient(string apiKey) : base(apiKey)
+    public NBAv3StatsClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public NBAv3StatsClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>
@@ -53,6 +51,12 @@ public partial class NBAv3StatsClient : BaseClient
     {
         var parameters = new List<KeyValuePair<string, string>> {new("date", date), new("minutes", minutes)};
         return this.GetAsync<List<BoxScore>>("/v3/nba/stats/{format}/BoxScoresDelta/{date}/{minutes}", parameters);
+    }
+
+    public Task<(List<BoxScore>, string)> GetRawBoxScoresDeltaAsync(string date, string minutes)
+    {
+        var parameters = new List<KeyValuePair<string, string>> {new("date", date), new("minutes", minutes)};
+        return this.GetRawAsync<List<BoxScore>>("/v3/nba/stats/{format}/BoxScoresDelta/{date}/{minutes}", parameters);
     }
 
     /// <summary>

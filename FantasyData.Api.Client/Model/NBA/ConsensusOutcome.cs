@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NBA;
 
 [DataContract(Namespace="", Name="ConsensusOutcome")]
 [Serializable]
-public partial class ConsensusOutcome
+public class ConsensusOutcome
 {
     /// <summary>
     /// The number of sportsbooks odds that went into creating this consensus outcome

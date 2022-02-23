@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.NHL;
 
 namespace FantasyData.Api.Client;
 
-public partial class NHLv3StatsClient : BaseClient
+public class NHLv3StatsClient : BaseClient
 {
-    public NHLv3StatsClient(string apiKey) : base(apiKey)
+    public NHLv3StatsClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public NHLv3StatsClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

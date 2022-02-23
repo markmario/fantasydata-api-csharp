@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="Timeframe")]
 [Serializable]
-public partial class Timeframe
+public class Timeframe : IEquatable<Timeframe>
 {
     /// <summary>
     /// The season type of the timeframe (1=Regular Season, 2=Preseason, 3=Postseason, 4=Offseason, 5=All-Star)
@@ -134,4 +134,64 @@ public partial class Timeframe
     [DataMember(Name = "ApiWeek", Order = 18)]
     public string ApiWeek { get; set; }
 
+    public bool Equals(Timeframe other)
+    {
+        if (ReferenceEquals(null, other))
+        {
+            return false;
+        }
+
+        if (ReferenceEquals(this, other))
+        {
+            return true;
+        }
+
+        return this.SeasonType == other.SeasonType && this.Season == other.Season && this.Week == other.Week && string.Equals(this.Name, other.Name, StringComparison.OrdinalIgnoreCase) && string.Equals(this.ShortName, other.ShortName, StringComparison.OrdinalIgnoreCase) && this.StartDate.Equals(other.StartDate) && this.EndDate.Equals(other.EndDate) && Nullable.Equals(this.FirstGameStart, other.FirstGameStart) && Nullable.Equals(this.FirstGameEnd, other.FirstGameEnd) && Nullable.Equals(this.LastGameEnd, other.LastGameEnd) && this.HasGames == other.HasGames && this.HasStarted == other.HasStarted && this.HasEnded == other.HasEnded && this.HasFirstGameStarted == other.HasFirstGameStarted && this.HasFirstGameEnded == other.HasFirstGameEnded && this.HasLastGameEnded == other.HasLastGameEnded && string.Equals(this.ApiSeason, other.ApiSeason, StringComparison.OrdinalIgnoreCase) && string.Equals(this.ApiWeek, other.ApiWeek, StringComparison.OrdinalIgnoreCase);
+    }
+
+    public override bool Equals(object obj)
+    {
+        if (ReferenceEquals(null, obj))
+        {
+            return false;
+        }
+
+        if (ReferenceEquals(this, obj))
+        {
+            return true;
+        }
+
+        if (obj.GetType() != this.GetType())
+        {
+            return false;
+        }
+
+        return Equals((Timeframe)obj);
+    }
+
+    public override int GetHashCode()
+    {
+        unchecked
+        {
+            var hashCode = this.SeasonType;
+            hashCode = (hashCode * 397) ^ this.Season;
+            hashCode = (hashCode * 397) ^ this.Week.GetHashCode();
+            hashCode = (hashCode * 397) ^ (this.Name != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(this.Name) : 0);
+            hashCode = (hashCode * 397) ^ (this.ShortName != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(this.ShortName) : 0);
+            hashCode = (hashCode * 397) ^ this.StartDate.GetHashCode();
+            hashCode = (hashCode * 397) ^ this.EndDate.GetHashCode();
+            hashCode = (hashCode * 397) ^ this.FirstGameStart.GetHashCode();
+            hashCode = (hashCode * 397) ^ this.FirstGameEnd.GetHashCode();
+            hashCode = (hashCode * 397) ^ this.LastGameEnd.GetHashCode();
+            hashCode = (hashCode * 397) ^ this.HasGames.GetHashCode();
+            hashCode = (hashCode * 397) ^ this.HasStarted.GetHashCode();
+            hashCode = (hashCode * 397) ^ this.HasEnded.GetHashCode();
+            hashCode = (hashCode * 397) ^ this.HasFirstGameStarted.GetHashCode();
+            hashCode = (hashCode * 397) ^ this.HasFirstGameEnded.GetHashCode();
+            hashCode = (hashCode * 397) ^ this.HasLastGameEnded.GetHashCode();
+            hashCode = (hashCode * 397) ^ (this.ApiSeason != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(this.ApiSeason) : 0);
+            hashCode = (hashCode * 397) ^ (this.ApiWeek != null ? StringComparer.OrdinalIgnoreCase.GetHashCode(this.ApiWeek) : 0);
+            return hashCode;
+        }
+    }
 }

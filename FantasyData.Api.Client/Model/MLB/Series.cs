@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MLB;
 
 [DataContract(Namespace="", Name="Series")]
 [Serializable]
-public partial class Series
+public class Series
 {
     /// <summary>
     /// Number of Wins by the Home Team 

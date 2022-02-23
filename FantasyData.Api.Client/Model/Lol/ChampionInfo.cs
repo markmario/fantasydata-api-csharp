@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="ChampionInfo")]
 [Serializable]
-public partial class ChampionInfo
+public class ChampionInfo
 {
     /// <summary>
     /// The unique id of the champion

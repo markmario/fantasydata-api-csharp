@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.Lol;
 
 namespace FantasyData.Api.Client;
 
-public partial class Lolv3ScoresClient : BaseClient
+public class Lolv3ScoresClient : BaseClient
 {
-    public Lolv3ScoresClient(string apiKey) : base(apiKey)
+    public Lolv3ScoresClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public Lolv3ScoresClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

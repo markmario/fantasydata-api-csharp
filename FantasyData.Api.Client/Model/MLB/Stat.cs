@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.MLB;
 
 [DataContract(Namespace="", Name="Stat")]
 [Serializable]
-public partial class Stat
+public class Stat
 {
     /// <summary>
     /// The timestamp of when the record was last updated (US Eastern Time).

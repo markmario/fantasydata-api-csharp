@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="MatchupTrends")]
 [Serializable]
-public partial class MatchupTrends
+public class MatchupTrends
 {
     /// <summary>
     /// Upcoming game between the team and the opponent

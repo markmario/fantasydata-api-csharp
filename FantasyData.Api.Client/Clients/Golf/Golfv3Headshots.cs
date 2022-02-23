@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.Golf;
 
 namespace FantasyData.Api.Client;
 
-public partial class Golfv3HeadshotsClient : BaseClient
+public class Golfv3HeadshotsClient : BaseClient
 {
-    public Golfv3HeadshotsClient(string apiKey) : base(apiKey)
+    public Golfv3HeadshotsClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public Golfv3HeadshotsClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

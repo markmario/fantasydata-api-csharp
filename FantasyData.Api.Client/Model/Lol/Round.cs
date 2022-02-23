@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Lol;
 
 [DataContract(Namespace="", Name="Round")]
 [Serializable]
-public partial class Round
+public class Round
 {
     /// <summary>
     /// The unique ID of the round

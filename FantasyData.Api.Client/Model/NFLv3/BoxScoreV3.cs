@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="BoxScoreV3")]
 [Serializable]
-public partial class BoxScoreV3
+public class BoxScoreV3
 {
     /// <summary>
     /// The Score object related to this game

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="DfsSlatePlayerOwnershipProjection")]
 [Serializable]
-public partial class DfsSlatePlayerOwnershipProjection
+public class DfsSlatePlayerOwnershipProjection
 {
     /// <summary>
     /// Unique ID of a Slate (assigned by FantasyData).

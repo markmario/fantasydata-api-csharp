@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Csgo;
 
 [DataContract(Namespace="", Name="DfsSlate")]
 [Serializable]
-public partial class DfsSlate
+public class DfsSlate
 {
     /// <summary>
     /// Unique ID of a Slate (assigned by FantasyData).

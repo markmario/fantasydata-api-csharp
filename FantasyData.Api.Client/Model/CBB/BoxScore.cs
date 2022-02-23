@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CBB;
 
 [DataContract(Namespace="", Name="BoxScore")]
 [Serializable]
-public partial class BoxScore
+public class BoxScore
 {
     /// <summary>
     /// The game details of this box score

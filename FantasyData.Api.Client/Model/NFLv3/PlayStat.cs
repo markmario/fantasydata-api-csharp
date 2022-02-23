@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="PlayStat")]
 [Serializable]
-public partial class PlayStat
+public class PlayStat
 {
     /// <summary>
     /// Unique identifier for each PlayStat.

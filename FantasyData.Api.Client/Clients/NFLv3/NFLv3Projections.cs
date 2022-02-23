@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.NFLv3;
 
 namespace FantasyData.Api.Client;
 
-public partial class NFLv3ProjectionsClient : BaseClient
+public class NFLv3ProjectionsClient : BaseClient
 {
-    public NFLv3ProjectionsClient(string apiKey) : base(apiKey)
+    public NFLv3ProjectionsClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public NFLv3ProjectionsClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

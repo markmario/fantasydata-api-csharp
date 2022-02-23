@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NBA;
 
 [DataContract(Namespace="", Name="PlayerProp")]
 [Serializable]
-public partial class PlayerProp
+public class PlayerProp
 {
     /// <summary>
     /// The PlayerID of the player

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="FantasyPlayer")]
 [Serializable]
-public partial class FantasyPlayer
+public class FantasyPlayer
 {
     /// <summary>
     /// Unique identifier of this fantasy player.  If this is a team defense, then this is the abbreviation of the team.  This field contains both integers and strings and should be treated as a string.  This value is guaranteed to be unique among all players and teams and can be used as the primary key for the FantasyPlayer table.

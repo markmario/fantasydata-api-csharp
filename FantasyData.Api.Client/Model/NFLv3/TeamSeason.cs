@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NFLv3;
 
 [DataContract(Namespace="", Name="TeamSeason")]
 [Serializable]
-public partial class TeamSeason
+public class TeamSeason
 {
     /// <summary>
     /// The type of season that this record corresponds to (1=Regular Season, 2=Preseason, 3=Postseason, 4=Offseason, 5=AllStar).

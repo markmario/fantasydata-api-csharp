@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.NFLv3;
 
 namespace FantasyData.Api.Client;
 
-public partial class NFLv3RotoBallerArticlesClient : BaseClient
+public class NFLv3RotoBallerArticlesClient : BaseClient
 {
-    public NFLv3RotoBallerArticlesClient(string apiKey) : base(apiKey)
+    public NFLv3RotoBallerArticlesClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public NFLv3RotoBallerArticlesClient(Guid apiKey) : base(apiKey)
-    {
     }
 
     /// <summary>

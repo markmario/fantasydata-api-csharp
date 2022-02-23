@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Nascar;
 
 [DataContract(Namespace="", Name="Race")]
 [Serializable]
-public partial class Race
+public class Race
 {
     /// <summary>
     /// The unique ID of this race

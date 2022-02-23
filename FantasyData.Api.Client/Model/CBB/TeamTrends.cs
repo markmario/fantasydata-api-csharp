@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.CBB;
 
 [DataContract(Namespace="", Name="TeamTrends")]
 [Serializable]
-public partial class TeamTrends
+public class TeamTrends
 {
     /// <summary>
     /// Abbreviation of the team (e.g. OU, TTU, USC, UK, etc.)

@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.Golf;
 
 [DataContract(Namespace="", Name="DfsSlateTournament")]
 [Serializable]
-public partial class DfsSlateTournament
+public class DfsSlateTournament
 {
     /// <summary>
     /// Unique ID of a SlateTournament (assigned by FantasyData).

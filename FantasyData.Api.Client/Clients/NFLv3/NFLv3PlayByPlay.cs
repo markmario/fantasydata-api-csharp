@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FantasyData.Api.Client.Model.NFLv3;
 
 namespace FantasyData.Api.Client;
 
-public partial class NFLv3PlayByPlayClient : BaseClient
+public class NFLv3PlayByPlayClient : NFLv3StatsClient
 {
-    public NFLv3PlayByPlayClient(string apiKey) : base(apiKey)
+    public NFLv3PlayByPlayClient(string apiKey, HttpClient client) : base(apiKey, client)
     {
-    }
 
-    public NFLv3PlayByPlayClient(Guid apiKey) : base(apiKey)
-    {
     }
-
     /// <summary>
     /// Get Play By Play Asynchronous
     /// </summary>

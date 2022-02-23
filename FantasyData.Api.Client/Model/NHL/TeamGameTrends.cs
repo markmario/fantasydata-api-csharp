@@ -6,7 +6,7 @@ namespace FantasyData.Api.Client.Model.NHL;
 
 [DataContract(Namespace="", Name="TeamGameTrends")]
 [Serializable]
-public partial class TeamGameTrends
+public class TeamGameTrends
 {
     /// <summary>
     /// The type of Trend (e.g. Last 5 games, Last 10 games, Last 5 home games, etc.)
