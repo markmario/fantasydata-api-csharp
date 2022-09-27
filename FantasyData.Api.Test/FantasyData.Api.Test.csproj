@@ -11,4 +11,13 @@
       <ProjectReference Include="..\FantasyData.Api.Client\FantasyData.Api.Client.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="Cb.Libraries.Enums, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\SCLive\Solution Items\Cb\Cb.Libraries.Enums.dll</HintPath>
+      </Reference>
+      <Reference Include="Cb.Models.CherryBet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\SCLive\Solution Items\Cb\Cb.Models.CherryBet.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

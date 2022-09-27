@@ -13,3 +13,5 @@
 */packages/*
 .idea/
 .DS_Store
+
+/.vs/
